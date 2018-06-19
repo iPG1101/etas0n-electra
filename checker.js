@@ -67,7 +67,7 @@ Electra.doChecks(Electra, (s0n)=>{
 	if(s0n) iMessage.send(PHONE_NUMBER, "etas0n jb iso 11.3.1\nElectra might've been released- They updated the website!");
 });
 
-if(process.argv.join(' ').includes(' --test')) {
+if(process.argv.join(' ').includes(' --test') || process.argv.join(' ').includes( '-t')) {
 	iMessage.send(PHONE_NUMBER, "Testing 1, 2, 3\nDid it work?");
 	process.exit()
 };
