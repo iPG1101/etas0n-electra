@@ -1,0 +1,13 @@
+{
+	"name": "Electra s0n?",
+	"version": "11.3.1",
+	"description": "Take a wild fucking guess",
+	"dependencies": {
+		"fs": "0.0.1-security",
+		"https": "^1.0.0",
+		"osa-imessage": "latest"
+	},
+	"os": [
+		"darwin"
+	]
+}
