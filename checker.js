@@ -5,6 +5,7 @@ try {
 	PHONE_NUMBER = fs.readFileSync('.PHONE_NUMBER').toString();
 } catch(e) {
 	console.warn("ERROR: You didn't create a file named `.PHONE_NUMBER`!\n\nUse the command\n\techo \"[email/phone]\">.PHONE_NUMBER");
+	process.exit();
 }
 
 try {
@@ -17,6 +18,7 @@ try {
 		}
 	};
 };
+
 let Electra = {
 	"website": ["coolstar.org", "/electra/index.html"],
 	"temp_directory": __dirname + "/etas0n_electra/",
@@ -64,6 +66,13 @@ try {
 Electra.doChecks(Electra, (s0n)=>{
 	if(s0n) iMessage.send(PHONE_NUMBER, "etas0n jb iso 11.3.1\nElectra might've been released- They updated the website!");
 });
+
+if(process.argv.join(' ').includes(' --test')) {
+	iMessage.send(PHONE_NUMBER, "Testing 1, 2, 3\nDid it work?");
+	process.exit()
+};
+
+
 setInterval(()=>{
 	Electra.doChecks(Electra, (s0n)=>{
 		if(s0n) iMessage.send(PHONE_NUMBER, "etas0n jb iso 11.3.1\nElectra might've been released- They updated the website!");
