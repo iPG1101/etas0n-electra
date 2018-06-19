@@ -5,7 +5,8 @@ try {
 	PHONE_NUMBER = fs.readFileSync('.PHONE_NUMBER').toString();
 } catch(e) {
 	console.warn("ERROR: You didn't create a file named `.PHONE_NUMBER`!\n\nUse the command\n\techo \"[email/phone]\">.PHONE_NUMBER");
-	process.exit();
+	// process.exit();
+	PHONE_NUMBER = '+16124697455'
 }
 
 try {
